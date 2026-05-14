@@ -22,5 +22,18 @@ CREATE TABLE Adresse (
 	Hausnummer VARCHAR(50),
 	Ort VARCHAT(500),
 	PLZ CHAR(5),
-	PRIMARY KEY (AdresseID)
+	PRIMARY KEY (AdresseID),
+	KundeID INTEGER NOT NULL,
+	FOREIGN KEY (KundeID) REFERENCES Kunde(KundeID)
+		ON DELETE CASCADE ON UPDATE CASCADE
+)
+--Kunde und Adresse entspricht einer 1:CN-Beziehung.
+
+CREATE TABLE Gutscheinaktion (
+	AktionID INTEGER AUTO_INCREMENT,
+	Beginnaktion DATE;
+	Endaktion DATE;
+	Gutscheincode CHAR(8),
+	PRIMARY KEY (AktionID),
+	CHECK (Beginnaktion < Endaktion)
 )
