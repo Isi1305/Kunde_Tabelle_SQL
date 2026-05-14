@@ -4,3 +4,11 @@ CREATE TABLE Kunde (
 	Vorname VARCHAR(500),
 	KundenNR VARCHAR(15)
 )
+
+--CREATE TABLE Name der Tabelle (
+	--Spaltendefinition,
+	--Primärschlüsseldefinition,
+	--[Integritätsregeln,]
+	--[Fremdschlüsseldefinition,]
+	--[Festlegung von Bedingungen zu Spalten]
+--)
