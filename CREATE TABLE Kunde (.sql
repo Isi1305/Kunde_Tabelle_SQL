@@ -1,0 +1,6 @@
+CREATE TABLE Kunde (
+	KundeID INTEGER,
+	Name VARCHAR(500),
+	Vorname VARCHAR(500),
+	KundenNR VARCHAR(15)
+)
