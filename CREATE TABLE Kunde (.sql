@@ -17,9 +17,10 @@ CREATE TABLE Kunde (
 --name datentyp [NOT NULL] [DEFAULT defaultwert] [UNIQUE] [CHECK (bedingung)]
 
 CREATE TABLE Adresse (
-	AdresseID INTEGER,
+	AdresseID INTEGER AUTO_INCREMENT,
 	Strasse VARCHAR(500),
 	Hausnummer VARCHAR(50),
+	Ort VARCHAT(500),
 	PLZ CHAR(5),
 	PRIMARY KEY (AdresseID)
 )
