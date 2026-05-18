@@ -1,0 +1,5 @@
+CREATE TABLE t (
+    i INTEGER, d DECIMAL(5,2), f FLOAT, c VARCHAR(3),
+    b BOOLEAN
+);
+

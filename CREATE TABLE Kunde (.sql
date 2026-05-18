@@ -45,3 +45,4 @@ INSERT INTO Gutscheinaktion
 	VALUES ('2014-10-10 12:00:00.000',
 	TIMESTAMP ('2014-11-10 12:00:00.000'),
 	'Herbstspecial', 'NJK-232-NML');
+
