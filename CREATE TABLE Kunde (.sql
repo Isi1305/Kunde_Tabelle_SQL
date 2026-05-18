@@ -31,9 +31,17 @@ CREATE TABLE Adresse (
 
 CREATE TABLE Gutscheinaktion (
 	AktionID INTEGER AUTO_INCREMENT,
-	Beginnaktion DATE;
-	Endaktion DATE;
-	Gutscheincode CHAR(8),
+	Beginnaktion TIMESTAMP NOT NULL,
+	Endaktion TIMESTAMP NOT NULL,
+	Titel VARCHAR(500) NOT NULL,
+	Beschreibung TEXT,
+	Gutscheincode CHAR(8) NOT NULL UNIQUE,
 	PRIMARY KEY (AktionID),
 	CHECK (Beginnaktion < Endaktion)
 )
+
+INSERT INTO Gutscheinaktion
+	(Beginnaktion, Endaktion, Titel, Beschreibung, Gutscheincode)
+	VALUES ('2014-10-10 12:00:00.000',
+	TIMESTAMP ('2014-11-10 12:00:00.000'),
+	'Herbstspecial', 'NJK-232-NML');
